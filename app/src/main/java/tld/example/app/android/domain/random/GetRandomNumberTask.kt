@@ -1,4 +1,4 @@
-package tld.example.app.android.domain.keyvalue
+package tld.example.app.android.domain.keyvalue.random
 
 import io.reactivex.Single
 import tld.example.app.android.data.exception.Failure

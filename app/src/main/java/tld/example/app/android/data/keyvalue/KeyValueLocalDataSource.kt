@@ -8,14 +8,14 @@ import tld.example.app.android.data.functional.Either
 import javax.inject.Inject
 
 class KeyValueLocalDataSource @Inject constructor(
-    rxkprefs: RxkPrefs
+    private val rxkprefs: RxkPrefs
 ) {
     private companion object {
         const val RANDOM_NUMBER_KEY = "RANDOM_NUMBER"
-        const val DEFAULT_NUMBER = -1
+        const val INVALID_NUMBER = -1
     }
 
-    private val randomNumber: Pref<Int> = rxkprefs.integer(RANDOM_NUMBER_KEY, DEFAULT_NUMBER)
+    private val randomNumber: Pref<Int> = rxkprefs.integer(RANDOM_NUMBER_KEY, INVALID_NUMBER)
 
     fun putInt(key: String, value: Int): Single<Either<Failure, Unit>> =
         when (key) {

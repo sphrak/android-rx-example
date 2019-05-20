@@ -1,10 +1,9 @@
-package tld.example.app.android.presentation.main
+package tld.example.app.android.presentation.widget.provider
 
-
-object MainActivityView {
+object WidgetProviderView {
 
     sealed class Event {
-        object OnInitialised : Event()
+        object OnViewInitialised : Event()
     }
 
     data class State(
@@ -13,6 +12,6 @@ object MainActivityView {
 
     sealed class RenderEvent {
         object None : RenderEvent()
-        class ShowRandomNumber(val randomNumber: Int) : RenderEvent()
     }
+
 }

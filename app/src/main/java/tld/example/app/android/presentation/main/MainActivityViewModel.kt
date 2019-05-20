@@ -6,10 +6,12 @@ import javax.inject.Inject
 
 class MainActivityViewModel @Inject constructor(
     private val state: MainActivityView.State,
-    private val getKeyValueTask: GetKeyValueTask,
-    private val setKeyValueTask: SetKeyValueTask
+    private val getKeyValueTask: GetKeyValueTask
 ) {
 
+    /**
+     *  Load the initial value stored in randomNumber prefs
+     */
     operator fun invoke() {
 
     }

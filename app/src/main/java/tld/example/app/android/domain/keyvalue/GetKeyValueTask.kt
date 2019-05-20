@@ -6,6 +6,7 @@ import tld.example.app.android.data.functional.Either
 import tld.example.app.android.data.keyvalue.KeyValueLocalDataSource
 import javax.inject.Inject
 
+
 class GetKeyValueTask @Inject constructor(
     private val local: KeyValueLocalDataSource
 ) {
